@@ -8,7 +8,13 @@
   src: url(includes/fonts/PlayfairDisplaySC-Black.ttf);
   font-style: normal;
   font-weight: bold; }
+@font-face {
+  font-family: 'Baskerville';
+  src: url(includes/fonts/Baskerville.ttf);
+  font-style: normal;
+  font-weight: normal; }
 body {
+  font-family: "Futura";
   background-color: #2c3549;
   height: auto;
   width: auto;
@@ -36,7 +42,6 @@ body {
     padding: 0 0 0 40px; }
   .nav-item a {
     color: #ffffff;
-    font-family: "Futura";
     text-decoration: none;
     letter-spacing: 2px; }
     .nav-item a:hover,
@@ -59,6 +64,21 @@ body {
 .nav .current a {
   color: #d9a260; }
 
+.button {
+  width: 250px;
+  margin: 50px auto; }
+  .button a {
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    width: 250px;
+    padding: 15px 60px;
+    background-color: #d9a260;
+    border: 1px solid #d9a260;
+    letter-spacing: 2px;
+    border-radius: 50px; }
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -73,7 +93,6 @@ body {
   .sidenav a {
     padding: 28px 8px 28px 32px;
     text-decoration: none;
-    font-family: "Futura";
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -92,7 +111,6 @@ body {
       .sidenav a .profile-title.profile-title-1 {
         padding-left: 10px; }
   .sidenav .closebtn {
-    font-family: "Futura";
     font-size: 25px;
     position: absolute;
     top: 0;
@@ -173,5 +191,35 @@ body {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
   transform: translate3d(30%, 0, -200px);
   opacity: .1; }
+
+.cart-container {
+  font-family: 'Baskerville';
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  text-align: left; }
+  .cart-container .cart-item-title {
+    background-color: #485677;
+    width: 198px;
+    height: 15px; }
+    .cart-container .cart-item-title div {
+      margin-top: -8px;
+      font-size: 13px; }
+  .cart-container .cart-item-size {
+    font-family: "Futura"; }
+    .cart-container .cart-item-size div {
+      margin-top: -8px; }
+  .cart-container .cart-item-price {
+    background-color: #d9a260;
+    width: 52px;
+    height: 15px; }
+    .cart-container .cart-item-price div {
+      margin-top: -10px;
+      font-size: 20px; }
+  .cart-container .cart-item-amount div {
+    margin-top: -8px; }
 
 /*# sourceMappingURL=styles.css.map */

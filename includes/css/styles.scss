@@ -12,6 +12,13 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: 'Baskerville';
+    src: url(includes/fonts/Baskerville.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
 $primary-color: #2c3549;
 
 $secondary-color: #d9a260;
@@ -20,7 +27,10 @@ $primary-text-color: #ffffff;
 
 $primary-font: 'Futura';
 
+$secondary-font: 'Playfair';
+
 body {
+    font-family: $primary-font;
     background-color: $primary-color;
     height: auto;
     width: auto;
@@ -58,7 +68,6 @@ body {
 
     a {
         color: $primary-text-color;
-        font-family: $primary-font;
         text-decoration: none;
         letter-spacing: 2px;
 
@@ -84,13 +93,34 @@ body {
     }
 
     i {
-        color: #ffffff;
+        color: $primary-text-color;
         font-size: 18px;
     }
 }
 
 .nav .current a {
     color: $secondary-color;
+}
+
+// Button Styles 
+
+.button {
+    width:250px;
+    margin: 50px auto;
+
+    a {
+        font-size: 20px;
+        text-align: center;
+        color: $primary-text-color;
+        text-decoration: none;
+        width: 250px;
+        padding: 15px 60px;
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        letter-spacing: 2px;
+        border-radius: 50px;
+
+    }
 }
 
 // Side Nav Styles
@@ -101,7 +131,7 @@ body {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #ffffff;
+    background-color: $primary-text-color;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -109,7 +139,6 @@ body {
     a {
         padding: 28px 8px 28px 32px;
         text-decoration: none;
-        font-family: $primary-font;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -142,7 +171,6 @@ body {
     }
 
     .closebtn {
-        font-family: $primary-font;
         font-size: 25px;
         position: absolute;
         top: 0;
@@ -239,4 +267,50 @@ body {
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
     transform: translate3d(30%, 0, -200px);
     opacity: .1;
+}
+
+// Bag styles 
+
+.cart-container {
+    font-family: 'Baskerville';
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    text-align: left;
+
+    .cart-item-title {
+        background-color: #485677;
+        width: 198px;
+        height: 15px;
+
+        div {
+            margin-top: -8px;
+            font-size: 13px;
+        }
+    }
+
+    .cart-item-size {
+        font-family: $primary-font;
+        div {
+            margin-top: -8px;
+        }
+    }
+
+    .cart-item-price {
+        background-color: $secondary-color;
+        width: 52px;
+        height: 15px;
+
+        div {
+            margin-top: -10px;
+            font-size: 20px;
+        }
+    }
+
+    .cart-item-amount div {
+        margin-top: -8px;
+    }
 }
