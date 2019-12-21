@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'Futura';
+    src: url(includes/fonts/futuramediumbt.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url(includes/fonts/PlayfairDisplaySC-Black.ttf);
+    font-style: normal;
+    font-weight: bold;
+}
+
+$primary-color: #2c3549;
+
+$secondary-color: #d9a260;
+
+$primary-text-color: #ffffff;
+
+$primary-font: 'Futura';
+
+body {
+    background-color: $primary-color;
+    height: auto;
+    width: auto;
+    color: $primary-text-color;
+    padding: 40px;
+    overflow-x: hidden;
+}
+
+// nav styles
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 240px;
+}
+
+.nav {
+    display: flex;
+    text-align: right;
+
+}
+
+.nav-item {
+    padding: 0 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &:last-child {
+        padding: 0 0 0 40px;
+    }
+
+    a {
+        color: $primary-text-color;
+        font-family: $primary-font;
+        text-decoration: none;
+        letter-spacing: 2px;
+
+        &:hover,
+        :focus {
+            color: $secondary-color;
+        }
+    }
+}
+
+.settings-button {
+    font-size: 18px;
+    font-family: inherit;
+    border: none;
+    background: transparent;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    i {
+        color: #ffffff;
+        font-size: 18px;
+    }
+}
+
+.nav .current a {
+    color: $secondary-color;
+}
+
+// Side Nav Styles
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    a {
+        padding: 28px 8px 28px 32px;
+        text-decoration: none;
+        font-family: $primary-font;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $secondary-color;
+        display: block;
+        transition: 0.3s;
+
+        :first-of-type {
+            padding-top: 40px;
+        }
+
+        &:hover {
+            color: #262626;
+        }
+
+        &.profile-link {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-title {
+
+            padding-left: 50px;
+
+            &.profile-title-1 {
+                padding-left: 10px;
+
+            }
+        }
+    }
+
+    .closebtn {
+        font-family: $primary-font;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
+
+.profile-img {
+    width: 40px;
+    padding-right: 10px;
+}
+
+
+
+
+// slider styles
+.primary-container {
+    margin-top: 100px;
+}
+
+.slider-img {
+    width: 710px;
+}
+
+[type=radio] {
+    display: none;
+}
+
+#slider {
+    height: 35vw;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#slider label {
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+    transform: translate3d(-30%, 0, -200px);
+    opacity: .1;
+}
+
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2);
+    transform: translate3d(-15%, 0, -100px);
+    opacity: .5;
+}
+
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+    box-shadow: 0 13px 25px 0 rgba(0, 0, 0, .3), 0 11px 7px 0 rgba(0, 0, 0, .19);
+    transform: translate3d(0, 0, 0);
+}
+
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2);
+    transform: translate3d(15%, 0, -100px);
+    opacity: .5;
+}
+
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+    transform: translate3d(30%, 0, -200px);
+    opacity: .1;
+}
