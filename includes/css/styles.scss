@@ -1,3 +1,8 @@
+@use 'includes/js/glide-3.4.1/src/assets/sass/glide.core';
+
+@use 'includes/js/glide-3.4.1/src/assets/sass/glide.theme';
+
+
 @font-face {
     font-family: 'Futura';
     src: url(includes/fonts/futuramediumbt.ttf);
@@ -9,7 +14,7 @@
     font-family: 'Playfair';
     src: url(includes/fonts/PlayfairDisplaySC-Black.ttf);
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 @font-face {
@@ -105,7 +110,7 @@ body {
 // Button Styles 
 
 .button {
-    width:250px;
+    width: 250px;
     margin: 50px auto;
 
     a {
@@ -168,6 +173,10 @@ body {
 
             }
         }
+
+        .profile-title-nav {
+            display: none;
+        }
     }
 
     .closebtn {
@@ -185,8 +194,9 @@ body {
     padding-right: 10px;
 }
 
-
-
+.collapse {
+    display: none !important;
+}
 
 // slider styles
 .primary-container {
@@ -194,7 +204,7 @@ body {
 }
 
 .slider-img {
-    width: 710px;
+    width: 100%;
 }
 
 [type=radio] {
@@ -269,7 +279,7 @@ body {
     opacity: .1;
 }
 
-// Bag styles 
+// Bag page styles 
 
 .cart-container {
     font-family: 'Baskerville';
@@ -294,6 +304,7 @@ body {
 
     .cart-item-size {
         font-family: $primary-font;
+
         div {
             margin-top: -8px;
         }
@@ -312,5 +323,215 @@ body {
 
     .cart-item-amount div {
         margin-top: -8px;
+    }
+}
+
+// Shop page styles
+
+.clothing-category {
+    img {
+        height: 400px;
+    }
+}
+
+.shop-container {
+    margin-top: 100px;
+    display: flex;
+    align-items: flex-start;
+
+    .shop-slider {
+        margin: auto;
+        width: 25%;
+    }
+}
+
+.bag-slider-product {
+    width: 100%;
+}
+
+.item-description {
+    width: 300px;
+    text-align: center;
+
+    span {
+        font-family: $secondary-font;
+        font-size: 18px;
+        letter-spacing: 4px;
+        border-bottom: 3px solid $secondary-color;
+        padding: 10px;
+    }
+
+    p {
+        text-align: left;
+        font-size: 12px;
+        letter-spacing: 2px;
+        line-height: 18px;
+        padding: 10px 20px 30px;
+    }
+
+    .color-choices {
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+        border-radius: 40px 0 0 40px;
+        padding: 10px;
+
+        img {
+            width: 18px;
+            padding: 0;
+        }
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 3px 4px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid #262626;
+            border-radius: 80px
+        }
+    }
+
+    .price {
+        padding: 40px;
+    }
+}
+
+.glide__arrow {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.glide__arrow--right {
+    right: -7em !important;
+
+    &:hover {
+        -webkit-transform: translateX(8px)translateY(-45px);
+        transform: translateX(8px) translateY(-45px);
+        transition-duration: .3s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+
+    }
+}
+
+.glide__arrow--left {
+    left: -7em !important;
+
+    &:hover {
+        -webkit-transform: translateX(-8px)translateY(-45px);
+        transform: translateX(-8px) translateY(-45px);
+        transition-duration: .3s;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+    }
+
+}
+
+.slider-arrow {
+    height: 70px;
+}
+
+// Responsive Styles
+@media only screen and (max-width:1090px) {
+    .button {
+        width: 100%;
+        text-align: center;
+        a {
+            margin: 20px auto;
+            padding: 15px 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:840px) {
+    .logo {
+        width: 160px;
+    }
+
+    .cart-container {
+        display: block !important;
+        text-align: center !important;
+
+        .cart-item-title,
+        .cart-item-size,
+        .cart-item-price,
+        .cart-item-amount {
+            margin: 25px auto;
+        }
+    }
+
+    .nav-item-collapse {
+        display: none;
+        position: absolute;
+    }
+
+    .collapse {
+        display: block !important;
+    }
+
+    .sidenav a .profile-title-nav {
+        display: block;
+        padding: 0 50px;
+
+    }
+
+    .shop-container {
+        display: block;
+        margin-top: 30px;
+
+        .shop-slider {
+            width: 50%;
+        }
+    }
+
+    .clothing-category {
+        display: none;
+    }
+
+    .item-description {
+        margin: 10px auto;
+
+        p {
+            text-align: center;
+        }
+
+        .color-choices {
+            border-radius: 40px;
+        }
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    body {
+        padding: 20px;
+    }
+
+    .item-description {
+        width: 100%;
+
+        span {
+            font-size: 15px;
+            white-space: nowrap;
+            letter-spacing: 2px;
+        }
+
+        .price {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .button {
+        width: 100%;
+        a {
+            margin: auto;
+            padding: 10px 20px;
+            font-size: 15px;
+        }
     }
 }

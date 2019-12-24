@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Carousel Example</title>
+    <link rel="stylesheet" href="includes/js/flickity-docs/flickity.css" media="screen">
+
+</head>
+
+   
+
+<body>
+
+    <div class="main-carousel">
+        <div class="carousel-cell"><img src="includes/img/product1.jpeg" alt=""></div>
+        <div class="carousel-cell"><img src="includes/img/product2.jpeg" alt=""></div>
+        <div class="carousel-cell"><img src="includes/img/product3.jpeg" alt=""></div>
+        ...
+      </div>
+      <script src="/path/to/flickity.pkgd.min.js"></script>
+      <script>var elem = document.querySelector('.main-carousel');
+          var flkty = new Flickity( elem, {
+            // options
+            cellAlign: 'left',
+            contain: true
+          });
+          
+          // element argument can be a selector string
+          //   for an individual element
+          var flkty = new Flickity( '.main-carousel', {
+            // options
+          });</script>
+</body>
+
+</html>

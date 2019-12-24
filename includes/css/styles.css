@@ -1,3 +1,5 @@
+@use 'includes/js/glide-3.4.1/src/assets/sass/glide.core';
+@use 'includes/js/glide-3.4.1/src/assets/sass/glide.theme';
 @font-face {
   font-family: 'Futura';
   src: url(includes/fonts/futuramediumbt.ttf);
@@ -7,7 +9,7 @@
   font-family: 'Playfair';
   src: url(includes/fonts/PlayfairDisplaySC-Black.ttf);
   font-style: normal;
-  font-weight: bold; }
+  font-weight: normal; }
 @font-face {
   font-family: 'Baskerville';
   src: url(includes/fonts/Baskerville.ttf);
@@ -110,6 +112,8 @@ body {
       padding-left: 50px; }
       .sidenav a .profile-title.profile-title-1 {
         padding-left: 10px; }
+    .sidenav a .profile-title-nav {
+      display: none; }
   .sidenav .closebtn {
     font-size: 25px;
     position: absolute;
@@ -122,11 +126,14 @@ body {
   width: 40px;
   padding-right: 10px; }
 
+.collapse {
+  display: none !important; }
+
 .primary-container {
   margin-top: 100px; }
 
 .slider-img {
-  width: 710px; }
+  width: 100%; }
 
 [type=radio] {
   display: none; }
@@ -221,5 +228,146 @@ body {
       font-size: 20px; }
   .cart-container .cart-item-amount div {
     margin-top: -8px; }
+
+.clothing-category img {
+  height: 400px; }
+
+.shop-container {
+  margin-top: 100px;
+  display: flex;
+  align-items: flex-start; }
+  .shop-container .shop-slider {
+    margin: auto;
+    width: 25%; }
+
+.bag-slider-product {
+  width: 100%; }
+
+.item-description {
+  width: 300px;
+  text-align: center; }
+  .item-description span {
+    font-family: "Playfair";
+    font-size: 18px;
+    letter-spacing: 4px;
+    border-bottom: 3px solid #d9a260;
+    padding: 10px; }
+  .item-description p {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 18px;
+    padding: 10px 20px 30px; }
+  .item-description .color-choices {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 40px 0 0 40px;
+    padding: 10px; }
+    .item-description .color-choices img {
+      width: 18px;
+      padding: 0; }
+  .item-description button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 3px 4px; }
+    .item-description button:focus {
+      outline: none;
+      border: 2px solid #262626;
+      border-radius: 80px; }
+  .item-description .price {
+    padding: 40px; }
+
+.glide__arrow {
+  border: none !important;
+  box-shadow: none !important; }
+
+.glide__arrow--right {
+  right: -7em !important; }
+  .glide__arrow--right:hover {
+    -webkit-transform: translateX(8px) translateY(-45px);
+    transform: translateX(8px) translateY(-45px);
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-timing-function: ease-out; }
+
+.glide__arrow--left {
+  left: -7em !important; }
+  .glide__arrow--left:hover {
+    -webkit-transform: translateX(-8px) translateY(-45px);
+    transform: translateX(-8px) translateY(-45px);
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-timing-function: ease-out; }
+
+.slider-arrow {
+  height: 70px; }
+
+@media only screen and (max-width: 1090px) {
+  .button {
+    width: 100%;
+    text-align: center; }
+    .button a {
+      margin: 20px auto;
+      padding: 15px 30px; } }
+@media only screen and (max-width: 840px) {
+  .logo {
+    width: 160px; }
+
+  .cart-container {
+    display: block !important;
+    text-align: center !important; }
+    .cart-container .cart-item-title,
+    .cart-container .cart-item-size,
+    .cart-container .cart-item-price,
+    .cart-container .cart-item-amount {
+      margin: 25px auto; }
+
+  .nav-item-collapse {
+    display: none;
+    position: absolute; }
+
+  .collapse {
+    display: block !important; }
+
+  .sidenav a .profile-title-nav {
+    display: block;
+    padding: 0 50px; }
+
+  .shop-container {
+    display: block;
+    margin-top: 30px; }
+    .shop-container .shop-slider {
+      width: 50%; }
+
+  .clothing-category {
+    display: none; }
+
+  .item-description {
+    margin: 10px auto; }
+    .item-description p {
+      text-align: center; }
+    .item-description .color-choices {
+      border-radius: 40px; } }
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 20px; }
+
+  .item-description {
+    width: 100%; }
+    .item-description span {
+      font-size: 15px;
+      white-space: nowrap;
+      letter-spacing: 2px; }
+    .item-description .price img {
+      width: 100%; }
+
+  .button {
+    width: 100%; }
+    .button a {
+      margin: auto;
+      padding: 10px 20px;
+      font-size: 15px; } }
 
 /*# sourceMappingURL=styles.css.map */
